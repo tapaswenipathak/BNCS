@@ -258,11 +258,11 @@ int elevenuptodec(int sb,int tb)
     fflush(stdin);
     printf("\ninformation :");
     
-    gets(s);
+    fgets(s, sizeof(s), stdin);
     //scanf("%c",&s[i]);
     if(sb==16)
     {
-        for(i=0;s[i]!=NULL;i++)
+        for(i=0;s[i]!=NULL && s[i] != '\n';i++)
         {
             switch(s[i])
             {
